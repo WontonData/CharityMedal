@@ -1,0 +1,9 @@
+{
+  "language": "",
+  "main": "./contracts/CharityMedal.sol",
+  "deploy": "./build/contracts/CharityMedal.json",
+  "compilers": {
+    "cfxtruffle": "0.0.8",
+    "solc": "default"
+  }
+}
