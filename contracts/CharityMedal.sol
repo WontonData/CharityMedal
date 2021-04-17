@@ -1,4 +1,3 @@
-// contracts/GameItem.sol
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.6.0;
 
@@ -24,14 +23,17 @@ contract CharityMedal is ERC721 ,Ownable{
     charityFactoryAddress = _charityFactoryAddress;
   }
 
+  // 更改需求工厂合约地址
   function updateCharityFactoryAddress(address _newAddress) public onlyOwner{
     charityFactoryAddress = _newAddress;
   }
 
+  //更改物品URI
   function updateItemURI(string memory _uri) public onlyOwner{
     itemURI = _uri;
   }
 
+  // 颁发物品(勋章)
   function awardItem(address player)
     public
     onlyCharityFactory
@@ -46,7 +48,8 @@ contract CharityMedal is ERC721 ,Ownable{
     return newItemId;
   }
 
-  function getMyItems(address player) public view returns(uint[] memory itemIds){
+  //获取拥有的物品id
+  function getItemIds(address player) public view returns(uint[] memory itemIds){
     itemIds = myItems[player];
   }
 

@@ -7,7 +7,7 @@
 ## 地址
 
 ```
-cfxtest:type.contract:acbcma94397hwmfj5jcsa76bjtn0jbcd3ybwnemhcm
+cfxtest:type.contract:accu342fdxt6wugpp9jv03x39a1rsgdpwp9w8usuf1
 ```
 
 ## ABI
@@ -576,7 +576,7 @@ cfxtest:type.contract:acbcma94397hwmfj5jcsa76bjtn0jbcd3ybwnemhcm
         "networkId": 1
       }
     ],
-    "name": "getMyItems",
+    "name": "getItemIds",
     "outputs": [
       {
         "internalType": "uint256[]",
