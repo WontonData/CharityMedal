@@ -12,7 +12,8 @@ contract CharityMedal is ERC721 ,Ownable{
   Counters.Counter private _tokenIds;
   string itemURI = "https://ipfs.io/ipfs/QmZb9yftwSV6NEW8RfDVHHrJ9dGPZdWhAxecqTSV78wQUt";
   address charityFactoryAddress;
-  mapping(address => uint[]) public myItems;
+  mapping(address => uint[]) private myItems;
+  address[] private Owners;
 
   modifier onlyCharityFactory() {
     require(msg.sender == charityFactoryAddress,'Must CharityFactory');
@@ -44,6 +45,9 @@ contract CharityMedal is ERC721 ,Ownable{
     uint256 newItemId = _tokenIds.current();
     _mint(player, newItemId);
     _setTokenURI(newItemId, itemURI);
+    if(myItems[player].length==0){
+      Owners.push(player);
+    }
     myItems[player].push(newItemId);
     return newItemId;
   }
@@ -51,6 +55,11 @@ contract CharityMedal is ERC721 ,Ownable{
   //获取拥有的物品id
   function getItemIds(address player) public view returns(uint[] memory itemIds){
     itemIds = myItems[player];
+  }
+
+  //获取拥有的物品id
+  function getOwners() public view returns(address[] memory _Owners){
+    _Owners = Owners;
   }
 
   //合约销毁
