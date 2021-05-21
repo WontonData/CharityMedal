@@ -7,7 +7,7 @@
 ## 地址
 
 ```
-cfxtest:type.contract:accu342fdxt6wugpp9jv03x39a1rsgdpwp9w8usuf1
+cfxtest:type.contract:accrg6aybacjxh7cjrp8h1khn2t8fxgn0jz37s910n
 ```
 
 ## ABI
@@ -222,31 +222,6 @@ cfxtest:type.contract:accu342fdxt6wugpp9jv03x39a1rsgdpwp9w8usuf1
         "internalType": "bool",
         "name": "",
         "type": "bool"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "",
-        "type": "address",
-        "networkId": 1
-      },
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "name": "myItems",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
       }
     ],
     "stateMutability": "view",
@@ -582,6 +557,19 @@ cfxtest:type.contract:accu342fdxt6wugpp9jv03x39a1rsgdpwp9w8usuf1
         "internalType": "uint256[]",
         "name": "itemIds",
         "type": "uint256[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getOwners",
+    "outputs": [
+      {
+        "internalType": "address[]",
+        "name": "_Owners",
+        "type": "address[]"
       }
     ],
     "stateMutability": "view",
