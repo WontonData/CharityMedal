@@ -12,13 +12,10 @@
 测试网 `cfxtest:type.contract:accrg6aybacjxh7cjrp8h1khn2t8fxgn0jz37s910n`
 
 
-
-
-
 ## ABI
 
+### 主网
 ```json
-//主网
 [
   {
     "inputs": [
@@ -574,9 +571,10 @@
   }
 ]
 
+```
 
-
-//测试网
+### 测试网
+```json
 [
   {
     "inputs": [
@@ -1148,6 +1146,5 @@
   }
 ]
 ```
-
 
 
