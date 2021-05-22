@@ -61,7 +61,7 @@ contract CharityMedal is ERC721 ,Ownable{
     itemIds = myItems[player];
   }
 
-  //获取拥有的物品id
+  //获取所有拥有者
   function getOwners() public view returns(address[] memory _Owners){
     _Owners = Owners;
   }
