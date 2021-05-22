@@ -6,7 +6,7 @@
 
 ## 地址
 
-主网 `cfx:acd4x1rc5skd4ks14un9dvy2kkg42az1y28km8546s`
+主网 `cfx:accwx25cy50te2zkugkc50219rt2cx9pguxw99urkb`
 
 
 测试网 `cfxtest:type.contract:accrg6aybacjxh7cjrp8h1khn2t8fxgn0jz37s910n`
