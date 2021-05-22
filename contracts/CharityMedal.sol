@@ -4,7 +4,7 @@ pragma solidity ^0.6.0;
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 import "./lib/Ownable.sol";
-
+import "./lib/SponsorWhitelistControl.sol";
 
 // 慈善勋章
 contract CharityMedal is ERC721 ,Ownable{
@@ -14,6 +14,7 @@ contract CharityMedal is ERC721 ,Ownable{
   address charityFactoryAddress;
   mapping(address => uint[]) private myItems;
   address[] private Owners;
+  SponsorWhitelistControl constant public SPONSOR = SponsorWhitelistControl(0x0888000000000000000000000000000000000001);
 
   modifier onlyCharityFactory() {
     require(msg.sender == charityFactoryAddress,'Must CharityFactory');
@@ -22,6 +23,9 @@ contract CharityMedal is ERC721 ,Ownable{
 
   constructor(address _charityFactoryAddress) public ERC721("CharityMedal", "CM") {
     charityFactoryAddress = _charityFactoryAddress;
+    address[] memory users = new address[](1);
+    users[0] = address(0);
+    SPONSOR.addPrivilege(users);
   }
 
   // 更改需求工厂合约地址
